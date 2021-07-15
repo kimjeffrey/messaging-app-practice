@@ -11,7 +11,8 @@ export default function Login({setId}) {
     setId(idRef.current.value);
   }
 
-  function createNewId() {
+  function createNewId(e) {
+    e.preventDefault();
     setId(uuidv4());
   }
 
