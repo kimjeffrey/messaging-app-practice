@@ -17,7 +17,7 @@ export default function Login({setId}) {
   }
 
   return (
-    <div>
+    <div className="login-page">
       <h1>Login Page</h1>
       <form onSubmit={handleSubmit} className="login-form" action="">
         <label htmlFor="">
