@@ -8,7 +8,7 @@ export default function Conversations() {
   return (
     <div>
       {conversations.map((conversation, index) => (
-        <li key={index} onClick={() => selectConversationIndex(index)} className={conversation.selected && "selected"}>
+        <li key={index} onClick={() => selectConversationIndex(index)} className={conversation.selected ? "selected" : undefined}>
           {conversation.recipients.map(r => r.name).join(', ')}
         </li>
       ))}

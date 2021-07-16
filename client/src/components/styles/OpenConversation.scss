@@ -1,0 +1,54 @@
+.open-conversation-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .messages-container {
+    flex-grow: 1;
+    overflow: auto;
+    .messages {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: start;
+      
+      margin: 10px;
+      .align-right {
+        align-self: flex-end;
+      }
+      .message {
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .my-message {
+        background: skyblue;
+        color: white;
+      }
+      .other-message {
+        border: 1px solid black;
+      }
+      .message-from {
+        color: lightgray;
+        font-size: .8em;
+      }
+      .message-from-me {
+        text-align: right;
+      }
+      .message-from-other {
+        text-align: left;
+      }
+    }
+  }
+  form {
+    display: flex;
+    margin: 10px;
+    input {
+      height: 75px;
+      flex-grow: 1;
+    }
+    button {
+      height: 75px;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+  }
+}

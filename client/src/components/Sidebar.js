@@ -22,8 +22,8 @@ export default function Sidebar({id}) {
     <>
       <div className="sidebar">
         <nav>
-            <button className={display === "Conversations" && "selected"} onClick={() => {setDisplay("Conversations"); setButtonName("Conversation")}}>Conversations</button>
-            <button className={display === "Contacts" && "selected"} onClick={() => {setDisplay("Contacts"); setButtonName("Contact")}}>Contacts</button>
+            <button className={display === "Conversations" ? "selected" : undefined} onClick={() => {setDisplay("Conversations"); setButtonName("Conversation")}}>Conversations</button>
+            <button className={display === "Contacts" ? "selected" : undefined} onClick={() => {setDisplay("Contacts"); setButtonName("Contact")}}>Contacts</button>
         </nav> 
         <div className="content">
           {display === "Conversations" && 

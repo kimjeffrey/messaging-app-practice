@@ -11,7 +11,7 @@ function App() {
     <>
       {id ? 
         <ContactsProvider>
-          <ConversationsProvider>
+          <ConversationsProvider id={id}>
             <Dashboard id={id} />
           </ConversationsProvider>
         </ContactsProvider> 
