@@ -1,13 +1,23 @@
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
-import useLocalStorage from './components/hooks/useLocalStorage';
+import useLocalStorage from './hooks/useLocalStorage';
+import {ContactsProvider} from './contexts/ContactsProvider'
+import { ConversationsProvider } from './contexts/ConversationsProvider';
 
 function App() {
   const [id, setId] = useLocalStorage('id', "");
 
   return (
     <>
-      {id ? <Dashboard id={id} /> : <Login setId={setId} />}
+      {id ? 
+        <ContactsProvider>
+          <ConversationsProvider>
+            <Dashboard id={id} />
+          </ConversationsProvider>
+        </ContactsProvider> 
+        : 
+        <Login setId={setId} />
+      }
     </>
   );
 }

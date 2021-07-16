@@ -31,6 +31,32 @@
   }
   .create-new {
     padding: 10px;
-    
+  }
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,.5);
+  .modal-content {
+    background: white;
+    margin: 20% auto;
+    padding: 30px 20px;
+    width: 70%;
+    .close-button {
+      border: none;
+      background: white;
+      color: grey;
+      float: right;
+      font-size: 25px; 
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
   }
 }
